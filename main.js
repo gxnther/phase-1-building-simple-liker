@@ -3,9 +3,25 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
-
-
-
+document.addEventListener('DOMContentLoaded', () => {
+  const buttonCollection = document.querySelectorAll('.like-glyph');
+  for(const button of buttonCollection) {
+  button.addEventListener('click', handleClick)
+  }
+})
+function handleClick() {
+  mimicServerCall()
+  .then(
+    console.log("test")
+  )
+  .catch()
+}
+handleClick()
+// () => {
+//   console.log(button)
+//   button.className = "activated-heart" })
+//   }
+// }
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
